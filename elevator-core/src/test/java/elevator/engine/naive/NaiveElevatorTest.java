@@ -12,6 +12,8 @@ public class NaiveElevatorTest {
         NaiveElevator naiveElevator = new NaiveElevator();
 
         assertThat(naiveElevator).is("CLOSE 0").call(3, UP).
+                onTick("OPEN   ").
+                onTick("CLOSE  ").
                 onTick("      1").call(2, UP).
                 onTick("OPEN   ").
                 onTick("CLOSE  ").
@@ -28,6 +30,14 @@ public class NaiveElevatorTest {
                 onTick("OPEN   ").
                 onTick("CLOSE  ").
                 onTick("      4");
+    }
+
+    @Test
+    public void should_works_even_with_reset_at_start() {
+        NaiveElevator naiveElevator = new NaiveElevator();
+
+        assertThat(naiveElevator).is("CLOSE 0").reset().is("CLOSE 0").
+                onTick("OPEN   ");
     }
 
 }

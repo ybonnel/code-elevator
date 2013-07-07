@@ -33,7 +33,7 @@ Here is what you need to build and run a code elevator session :
 Steps
 -----
 
-These steps are described for a Mac Os X machine but can adapted to any operating system.
+These steps are described for a Mac Os X machine but can be adapted to any operating system.
 
 If you don't have jdk8 installed on your machine get `jdk-8-ea-bin-b92-macosx-x86_64-30_may_2013.dmg` from
 [jdk8.java.net](http://jdk8.java.net/download.html). Double-click on downloaded dmg file and follow instructions.
